@@ -1,0 +1,25 @@
+package de.zalando.zally.core.rule.zalando
+
+import de.zalando.zally.rulemodels.api.Check
+import de.zalando.zally.rulemodels.api.Context
+import de.zalando.zally.rulemodels.api.Rule
+import de.zalando.zally.rulemodels.api.Severity
+import de.zalando.zally.rulemodels.api.Violation
+import de.zalando.zally.core.util.getAllTransitiveSchemas
+
+@Rule(
+    ruleSet = ZalandoRuleSet::class,
+    id = "107",
+    severity = Severity.SHOULD,
+    title = "Prefer Compatible Extensions"
+)
+class ExtensibleEnumRule {
+
+    val description = "Property is not an extensible enum (use `x-extensible-enum` instead)"
+
+    @Check(severity = Severity.SHOULD)
+    fun checkForEnums(context: Context): List<Violation> =
+        context.api.getAllTransitiveSchemas()
+            .filter { it.enum != null && it.enum.isNotEmpty() }
+            .map { context.violation(description, it) }
+}
