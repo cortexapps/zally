@@ -3,11 +3,11 @@ package de.zalando.zally.server.apireview
 import com.fasterxml.jackson.databind.JsonNode
 import de.zalando.zally.core.EMPTY_JSON_POINTER
 import de.zalando.zally.core.toJsonPointer
-import de.zalando.zally.server.rule.TestRuleSet
 import de.zalando.zally.rulemodels.api.Check
 import de.zalando.zally.rulemodels.api.Rule
 import de.zalando.zally.rulemodels.api.Severity
 import de.zalando.zally.rulemodels.api.Violation
+import de.zalando.zally.server.util.TestRuleSet
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Primary

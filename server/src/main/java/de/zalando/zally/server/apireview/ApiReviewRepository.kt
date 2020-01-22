@@ -1,6 +1,6 @@
 package de.zalando.zally.server.apireview
 
-import de.zalando.zally.statistic.ReviewStatistics
+import de.zalando.zally.server.statistic.ReviewStatistics
 import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.CrudRepository
 import org.springframework.data.repository.query.Param
@@ -11,7 +11,7 @@ interface ApiReviewRepository : CrudRepository<ApiReview, Long> {
 
     @Query(
         """
-        SELECT new de.zalando.zally.statistic.ReviewStatistics(
+        SELECT new de.zalando.zally.server.statistic.ReviewStatistics(
 	        COUNT(r) AS totalReviews,
 	        COUNT(DISTINCT r.name) AS totalReviewDeduplicated,
 	        COALESCE(SUM(CASE WHEN r.isSuccessfulProcessed = 'True' THEN 1 ELSE 0 END),0) AS successfulReviews,
@@ -20,7 +20,7 @@ interface ApiReviewRepository : CrudRepository<ApiReview, Long> {
 	        COALESCE(SUM(r.shouldViolations),0) AS shouldViolations,
 	        COALESCE(SUM(r.mayViolations),0) AS mayViolations,
 	        COALESCE(SUM(r.hintViolations),0) AS hintViolations)
-        FROM de.zalando.zally.apireview.ApiReview r
+        FROM de.zalando.zally.server.apireview.ApiReview r
         WHERE day >= :from AND day <= :to AND user_agent LIKE :userAgent
     """
     )

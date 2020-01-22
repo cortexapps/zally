@@ -1,11 +1,11 @@
 package de.zalando.zally.server.apireview
 
-import de.zalando.zally.dto.ApiDefinitionRequest
-import de.zalando.zally.dto.ApiDefinitionResponse
-import de.zalando.zally.dto.ViolationDTO
-import de.zalando.zally.exception.ApiReviewNotFoundException
-import de.zalando.zally.exception.InaccessibleResourceUrlException
-import de.zalando.zally.exception.MissingApiDefinitionException
+import de.zalando.zally.server.dto.ApiDefinitionRequest
+import de.zalando.zally.server.dto.ApiDefinitionResponse
+import de.zalando.zally.server.dto.ViolationDTO
+import de.zalando.zally.server.exception.ApiReviewNotFoundException
+import de.zalando.zally.server.exception.InaccessibleResourceUrlException
+import de.zalando.zally.server.exception.MissingApiDefinitionException
 import de.zalando.zally.core.rule.ApiValidator
 import de.zalando.zally.core.rule.RulesPolicy
 import de.zalando.zally.rulemodels.api.Severity

@@ -1,8 +1,8 @@
 package de.zalando.zally.server.apireview
 
-import de.zalando.zally.dto.ApiDefinitionRequest
-import de.zalando.zally.exception.InaccessibleResourceUrlException
-import de.zalando.zally.exception.MissingApiDefinitionException
+import de.zalando.zally.server.dto.ApiDefinitionRequest
+import de.zalando.zally.server.exception.InaccessibleResourceUrlException
+import de.zalando.zally.server.exception.MissingApiDefinitionException
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpMethod

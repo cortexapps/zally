@@ -1,6 +1,6 @@
 package de.zalando.zally.server.apireview
 
-import de.zalando.zally.core.util.readApiDefinition
+import de.zalando.zally.server.util.readApiDefinition
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import org.springframework.test.context.TestPropertySource

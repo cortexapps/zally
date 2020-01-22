@@ -1,11 +1,11 @@
 package de.zalando.zally.server.apireview
 
-import de.zalando.zally.Application
-import de.zalando.zally.dto.ApiDefinitionRequest
-import de.zalando.zally.dto.ApiDefinitionResponse
-import de.zalando.zally.dto.RuleDTO
-import de.zalando.zally.dto.RulesListDTO
-import de.zalando.zally.statistic.ReviewStatistics
+import de.zalando.zally.server.Application
+import de.zalando.zally.server.dto.ApiDefinitionRequest
+import de.zalando.zally.server.dto.ApiDefinitionResponse
+import de.zalando.zally.server.dto.RuleDTO
+import de.zalando.zally.server.dto.RulesListDTO
+import de.zalando.zally.server.statistic.ReviewStatistics
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Before
 import org.junit.runner.RunWith

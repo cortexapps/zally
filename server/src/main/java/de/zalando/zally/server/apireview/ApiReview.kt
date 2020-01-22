@@ -1,6 +1,6 @@
 package de.zalando.zally.server.apireview
 
-import de.zalando.zally.dto.ApiDefinitionRequest
+import de.zalando.zally.server.dto.ApiDefinitionRequest
 import de.zalando.zally.core.rule.Result
 import de.zalando.zally.rulemodels.api.Severity
 import org.hibernate.annotations.Parameter

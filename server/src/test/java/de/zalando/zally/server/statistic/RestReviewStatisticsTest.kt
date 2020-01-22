@@ -1,13 +1,13 @@
 package de.zalando.zally.server.statistic
 
-import de.zalando.zally.apireview.ApiReview
-import de.zalando.zally.apireview.RestApiBaseTest
+import de.zalando.zally.server.apireview.ApiReview
+import de.zalando.zally.server.apireview.RestApiBaseTest
 import de.zalando.zally.core.toJsonPointer
-import de.zalando.zally.dto.ApiDefinitionRequest
+import de.zalando.zally.server.dto.ApiDefinitionRequest
 import de.zalando.zally.core.rule.Result
 import de.zalando.zally.rulemodels.api.Severity
-import de.zalando.zally.core.util.ErrorResponse
-import de.zalando.zally.core.util.TestDateUtil
+import de.zalando.zally.server.util.ErrorResponse
+import de.zalando.zally.server.util.TestDateUtil
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import org.springframework.http.HttpStatus.BAD_REQUEST

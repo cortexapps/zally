@@ -1,6 +1,6 @@
 package de.zalando.zally.server.statistic
 
-import de.zalando.zally.apireview.RuleViolation
+import de.zalando.zally.server.apireview.RuleViolation
 import de.zalando.zally.rulemodels.api.Severity
 
 class ViolationStatistic {

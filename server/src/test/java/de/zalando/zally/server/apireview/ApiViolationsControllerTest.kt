@@ -1,7 +1,7 @@
 package de.zalando.zally.server.apireview
 
-import de.zalando.zally.configuration.JacksonObjectMapperConfiguration
-import de.zalando.zally.dto.ApiDefinitionRequest
+import de.zalando.zally.server.configuration.JacksonObjectMapperConfiguration
+import de.zalando.zally.server.dto.ApiDefinitionRequest
 import org.hamcrest.CoreMatchers.hasItem
 import org.hamcrest.Matchers.containsString
 import org.hamcrest.Matchers.notNullValue

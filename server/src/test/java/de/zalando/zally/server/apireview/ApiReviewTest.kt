@@ -2,10 +2,10 @@ package de.zalando.zally.server.apireview
 
 import com.fasterxml.jackson.core.JsonPointer
 import de.zalando.zally.core.toJsonPointer
-import de.zalando.zally.dto.ApiDefinitionRequest
+import de.zalando.zally.server.dto.ApiDefinitionRequest
 import de.zalando.zally.core.rule.Result
 import de.zalando.zally.rulemodels.api.Severity
-import de.zalando.zally.core.util.resourceToString
+import de.zalando.zally.server.util.resourceToString
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import java.io.IOException

@@ -1,8 +1,8 @@
 package de.zalando.zally.server.statistic
 
-import de.zalando.zally.apireview.ApiReviewRepository
-import de.zalando.zally.exception.InsufficientTimeIntervalParameterException
-import de.zalando.zally.exception.TimeParameterIsInTheFutureException
+import de.zalando.zally.server.apireview.ApiReviewRepository
+import de.zalando.zally.server.exception.InsufficientTimeIntervalParameterException
+import de.zalando.zally.server.exception.TimeParameterIsInTheFutureException
 import org.slf4j.LoggerFactory
 import org.springframework.format.annotation.DateTimeFormat
 import org.springframework.web.bind.annotation.CrossOrigin

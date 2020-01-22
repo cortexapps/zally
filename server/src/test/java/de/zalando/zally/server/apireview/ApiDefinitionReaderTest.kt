@@ -1,9 +1,9 @@
 package de.zalando.zally.server.apireview
 
-import de.zalando.zally.dto.ApiDefinitionRequest
-import de.zalando.zally.exception.InaccessibleResourceUrlException
-import de.zalando.zally.exception.MissingApiDefinitionException
-import de.zalando.zally.core.util.JadlerUtil
+import de.zalando.zally.server.dto.ApiDefinitionRequest
+import de.zalando.zally.server.exception.InaccessibleResourceUrlException
+import de.zalando.zally.server.exception.MissingApiDefinitionException
+import de.zalando.zally.server.util.JadlerUtil
 import net.jadler.Jadler.closeJadler
 import net.jadler.Jadler.initJadlerUsing
 import net.jadler.stubbing.server.jdk.JdkStubHttpServer
