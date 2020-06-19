@@ -33,11 +33,7 @@ subprojects {
 
     val group = "de.zalando"
 
-    val projVersion = when {
-        System.getenv("JITPACK") == "true" ->
-            System.getenv("VERSION")
-        else -> null
-    } ?: "1.0.0-dev"
+    val projVersion = System.getenv("VERSION") ?: "1.0.0-dev"
 
     apply(plugin = "kotlin")
     apply(plugin = "kotlin-kapt")
@@ -93,24 +89,16 @@ subprojects {
                 artifact(tasks["javadocJar"])
             }
         }
-
         repositories {
             maven {
-                val releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
-                val snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
-                val isSnapshot = projVersion.toString().endsWith("-SNAPSHOT")
-                url = uri(if (isSnapshot) snapshotsRepoUrl else releasesRepoUrl)
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/cortexapps/zally-cortex")
                 credentials {
-                    // defined in travis project settings or in $HOME/.gradle/gradle.properties
-                    username = System.getenv("OSSRH_JIRA_USERNAME")
-                    password = System.getenv("OSSRH_JIRA_PASSWORD")
+                    username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_USERNAME")
+                    password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_PASSWORD")
                 }
             }
         }
-    }
-
-    signing {
-        sign(publishing.publications["mavenJava"])
     }
 
     configurations.all {
