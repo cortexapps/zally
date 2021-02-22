@@ -58,7 +58,7 @@
     "request": "2.83.0",
     "styled-components": "2.2.4",
     "url-search-params-polyfill": "2.0.1",
-    "whatwg-fetch": "2.0.3"
+    "whatwg-fetch": "2.0.4"
   },
   "devDependencies": {
     "@babel/core": "7.4.5",
