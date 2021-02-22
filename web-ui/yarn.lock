@@ -3006,9 +3006,10 @@ dot-prop@^4.1.0:
   dependencies:
     is-obj "^1.0.0"
 
-dress-code@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/dress-code/-/dress-code-2.3.0.tgz#55a251f4ad4efa0bfaac778eff9c81a8c61734b0"
+dress-code@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/dress-code/-/dress-code-2.4.0.tgz#cfe7590eb8f5a9dbaef722561a8f711a88ec91d1"
+  integrity sha512-Z69kh9o1EJEu+vhvZx30DAoUxpvqACIOws3r3vcIn7tCON8sesQPYIz80DoiWi2HHdeOcC+b8FFJcIvFBdctKA==
 
 duplexer3@^0.1.4:
   version "0.1.4"
